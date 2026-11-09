@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html {
+    font-family: 'Outfit', sans-serif;
+    background-color: #F5F5F0;
+    color: #141414;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: #F5F5F0;
+    color: #141414;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-editorial {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+}
+
+@layer components {
+  .argon-card {
+    @apply bg-white border border-[#E0DBD1]/90 rounded-xl shadow-argon transition-all duration-200;
+  }
+
+  .argon-card-hover {
+    @apply hover:shadow-argon-lg hover:border-[#C89B3C]/50;
+  }
+
+  .drk-label {
+    @apply block text-[10px] font-extrabold uppercase tracking-[0.22em] text-[#77726A] mb-1.5;
+  }
+
+  .drk-input {
+    @apply w-full bg-[#FAF9F5] border border-[#E0DBD1] rounded-lg px-3.5 py-2.5 text-sm text-[#141414] placeholder:text-stone-400 focus:outline-none focus:border-[#141414] focus:bg-white transition-colors;
+  }
+
+  .drk-select {
+    @apply w-full bg-[#FAF9F5] border border-[#E0DBD1] rounded-lg px-3.5 py-2.5 text-sm text-[#141414] focus:outline-none focus:border-[#141414] focus:bg-white transition-colors;
+  }
+
+  .drk-btn-primary {
+    @apply inline-flex items-center justify-center gap-2 bg-[#141414] hover:bg-[#292524] text-white text-xs font-semibold uppercase tracking-[0.16em] px-4 py-2.5 rounded-lg transition-all shadow-sm active:scale-[0.99];
+  }
+
+  .drk-btn-gold {
+    @apply inline-flex items-center justify-center gap-2 bg-[#C89B3C] hover:bg-[#b5892f] text-[#0A0807] text-xs font-bold uppercase tracking-[0.16em] px-4 py-2.5 rounded-lg transition-all shadow-sm active:scale-[0.99];
+  }
+
+  .drk-btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 bg-white hover:bg-[#FAF8F5] text-[#141414] border border-[#D5CFC4] hover:border-[#141414] text-xs font-semibold uppercase tracking-[0.14em] px-4 py-2.5 rounded-lg transition-all;
+  }
+
+  .drk-btn-whatsapp {
+    @apply inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#1fb858] text-white text-xs font-bold uppercase tracking-[0.14em] px-3.5 py-2 rounded-lg transition-all shadow-sm;
+  }
+
+  .drk-badge {
+    @apply inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-semibold tracking-wide;
+  }
+}
+
+/* Custom subtle scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F5F5F0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D5CFC4;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #77726A;
+}
